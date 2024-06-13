@@ -13,5 +13,5 @@
       "strictFunctionTypes": true,
       // "typeRoots": ["./global.d.ts", "./node_modules/@types"]
     },
-    "include": ["src/**/*"], //"global.d.ts"
+    "include": ["src/**/*", "global.d.ts"]  
 }
