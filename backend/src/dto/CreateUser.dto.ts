@@ -1,5 +1,12 @@
 export interface CreateUserDto {
-    username: string,
+    user_id: string,
+    name: string,
     email: string,
-    password: string
+    password: string,
+    role: string,
+    profile: {
+        phone: string,
+        address: string,
+        license_number: string
+    }
 }
