@@ -1,5 +1,16 @@
 
-import mongoose from "mongoose"
+import mongoose, { Document, Model } from "mongoose"
+import bcrypt from "bcrypt"
+
+interface IUser extends Document {
+    email: string;
+    password: string;
+}
+  
+interface IUserModel extends Model<IUser> {
+    login(email: string, password: string): Promise<IUser>;
+}
+
 
 const Schema = mongoose.Schema
 
@@ -11,6 +22,7 @@ const userSchema = new Schema({
     email: {
         type: String,
         required: true,
+        unique: true,
     },
     password: {
         type: String,
@@ -44,10 +56,17 @@ userSchema.statics.login = async function(email, password) {
     const user = await this.findOne({email})
 
     if(!user) {
-        throw Error('Invalid login details')
+        throw new Error('Invalid login details')
     }
 
+    const match = await bcrypt.compare(password, user.password)
 
+    if(!match) {
+        throw new Error('Invalid login details')
+    }
+
+    return user;
 }
 
-export default mongoose.model("Users", userSchema);
+const User = mongoose.model<IUser, IUserModel>("User", userSchema);
+export default User;
