@@ -4,6 +4,7 @@ import express, { NextFunction, Request, Response } from "express";
 import UsersRouter from "./routes/users";
 import DeliveryRouter from "./routes/delivery"
 import mongoose from "mongoose";
+import cors from 'cors';
 
 dotenv.config();
 
@@ -12,6 +13,10 @@ const app = express();
 
 // middleware
 app.use(express.json());
+
+app.use(cors({
+    origin: 'http://localhost:5173'
+}))
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     console.log(req.path, req.method);
@@ -22,7 +27,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 
 app.use("/api/users", UsersRouter);
 
-app.use("/api/delivery", DeliveryRouter);
+// app.use("/api/delivery", DeliveryRouter);
 
 // Connect to the database
 

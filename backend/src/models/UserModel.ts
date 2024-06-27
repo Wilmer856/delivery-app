@@ -1,14 +1,10 @@
 
 import mongoose, { Document, Model } from "mongoose"
 import bcrypt from "bcrypt"
-
-interface IUser extends Document {
-    email: string;
-    password: string;
-}
+import { CreateUserDto } from "../dto/CreateUser.dto";
   
-interface IUserModel extends Model<IUser> {
-    login(email: string, password: string): Promise<IUser>;
+interface IUserModel extends Model<CreateUserDto> {
+    login(email: string, password: string): Promise<CreateUserDto>;
 }
 
 
@@ -68,5 +64,5 @@ userSchema.statics.login = async function(email, password) {
     return user;
 }
 
-const User = mongoose.model<IUser, IUserModel>("User", userSchema);
+const User = mongoose.model<CreateUserDto, IUserModel>("User", userSchema);
 export default User;

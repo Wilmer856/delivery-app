@@ -8,4 +8,4 @@ declare namespace NodeJS {
       MONGO_URI: string;
       SECRET: string;
     }
-  }
+}
