@@ -3,7 +3,11 @@ import jwt from "jsonwebtoken";
 import User from "../models/UserModel"
 import { CreateUserDto } from "../dto/CreateUser.dto";
 
-const requireAuth = async (req: Request<CreateUserDto>, res: Response, next: NextFunction) => {
+export interface AuthRequest extends Request {
+    user?: CreateUserDto;
+}
+
+export const requireAuth = async (req: Request<AuthRequest>, res: Response, next: NextFunction) => {
 
     // verify authentication
     const { authorization } = req.headers
@@ -31,3 +35,12 @@ const requireAuth = async (req: Request<CreateUserDto>, res: Response, next: Nex
         res.status(401).json({error:'Request is not authorized'})
     }
 }
+
+export const requireRole = (role: string) => {
+    return (req: Request<AuthRequest>, res: Response, next: NextFunction) => {
+      if (!req.user || req.user.role !== role) {
+        return res.status(403).send({ error: 'Forbidden' });
+      }
+      next();
+    };
+};
