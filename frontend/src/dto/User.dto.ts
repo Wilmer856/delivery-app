@@ -1,4 +1,5 @@
 export interface User {
+    _id: string,
     email: string,
     password: string,
     name: string,
@@ -6,6 +7,7 @@ export interface User {
     profile: {
         phone: string,
         address: string,
-        license_number: string
+        license_number: string,
+        status: string
     }
 }

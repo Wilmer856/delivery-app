@@ -8,8 +8,8 @@ const router = Router()
 
 router.post("/login", loginUser);
 
-// /api/users/ ---obtains all users
+// /api/users/drivers ---obtains all drivers
 
-router.get("/", requireAuth, requireRole('admin'), getUsers);
+router.get("/drivers", requireAuth, requireRole('admin'), getUsers);
 
 export default router;

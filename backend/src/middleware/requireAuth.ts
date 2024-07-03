@@ -7,7 +7,7 @@ export interface AuthRequest extends Request {
     user?: CreateUserDto;
 }
 
-export const requireAuth = async (req: Request<AuthRequest>, res: Response, next: NextFunction) => {
+export const requireAuth = async (req: AuthRequest, res: Response, next: NextFunction) => {
 
     // verify authentication
     const { authorization } = req.headers
@@ -20,7 +20,7 @@ export const requireAuth = async (req: Request<AuthRequest>, res: Response, next
 
     try {
         const {_id} = jwt.verify(token, process.env.SECRET as string) as {_id:string}
-        const user = await User.findOne({_id}).select('_id')
+        const user = await User.findOne({_id}).select('_id role')
         
         if(!user) {
             throw new Error()
@@ -37,7 +37,7 @@ export const requireAuth = async (req: Request<AuthRequest>, res: Response, next
 }
 
 export const requireRole = (role: string) => {
-    return (req: Request<AuthRequest>, res: Response, next: NextFunction) => {
+    return (req: AuthRequest, res: Response, next: NextFunction) => {
       if (!req.user || req.user.role !== role) {
         return res.status(403).send({ error: 'Forbidden' });
       }

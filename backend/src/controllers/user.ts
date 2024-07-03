@@ -23,7 +23,7 @@ export const loginUser = async (req: Request<{},{},CreateUserDto>, res: Response
     }
 }
 
-export const getUsers = async (req: Request<AuthRequest>, res: Response) => {
+export const getUsers = async (req: Request, res: Response) => {
 
     try {
         const users = await User.find({role:"driver"});
