@@ -1,4 +1,4 @@
-import { Navbar, Nav, Button } from 'react-bootstrap';
+import { Navbar, Nav, Button, NavDropdown } from 'react-bootstrap';
 import { useAuthContext } from '../hooks/useAuthContext';
 import { useLogout } from '../hooks/useLogout';
 
@@ -6,6 +6,12 @@ const NavBar = () => {
 
   const { user } = useAuthContext();
   const { logout } = useLogout()
+
+  const notifications = [
+    'Notification 1',
+    'Notification 2',
+    'Notification 3'
+  ];
 
   return (
     <Navbar bg="light" expand="lg" className="p-4">
@@ -25,6 +31,11 @@ const NavBar = () => {
           )}
           <Nav.Link href="/profile">Profile</Nav.Link>
         </Nav>
+        <NavDropdown className="mx-4" title={<span><i className="fas fa-bell"></i></span>} id="notifications-dropdown">
+          {notifications.map((notification, index) => (
+            <NavDropdown.Item key={index}>{notification}</NavDropdown.Item>
+          ))}
+        </NavDropdown>
         <Button variant="outline-danger" onClick={logout}>Logout</Button>
       </Navbar.Collapse>
     </Navbar>

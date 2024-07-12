@@ -2,9 +2,9 @@ import dotenv from "dotenv";
 // import config from "./config"
 import express, { NextFunction, Request, Response } from "express";
 import UsersRouter from "./routes/users";
-import DeliveryRouter from "./routes/delivery"
+import DeliveryRouter from "./routes/delivery";
 import mongoose from "mongoose";
-import cors from 'cors';
+import cors from "cors";
 
 dotenv.config();
 
@@ -14,13 +14,15 @@ const app = express();
 // middleware
 app.use(express.json());
 
-app.use(cors({
-    origin: 'http://localhost:5173'
-}))
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
-    console.log(req.path, req.method);
-    next();
+  console.log(req.path, req.method);
+  next();
 });
 
 // routes
@@ -31,14 +33,16 @@ app.use("/api/users", UsersRouter);
 
 // Connect to the database
 
-mongoose.connect(process.env.MONGO_URI as string).then(() => {
+mongoose
+  .connect(process.env.MONGO_URI as string)
+  .then(() => {
     console.log("Connected to database");
 
     // listen for request
     app.listen(process.env.PORT, () => {
-        console.log('listening on port 3000');
-    })
-})
-.catch((error) => {
+      console.log("listening on port 3000");
+    });
+  })
+  .catch((error) => {
     console.log(error);
-});
+  });
