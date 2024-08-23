@@ -1,0 +1,294 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "d1605898b0bd6600",
+          "number": "349",
+          "street": "Fairview Avenue",
+          "unit": "",
+          "city": "Orange",
+          "district": "",
+          "region": "NJ",
+          "postcode": "07050",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.2407212, 40.7612139]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "a9149365533511c9",
+          "number": "35",
+          "street": "Smull Avenue",
+          "unit": "Apartment 1",
+          "city": "Caldwell",
+          "district": "",
+          "region": "NJ",
+          "postcode": "07006",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.2741588, 40.8419369]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "4fef7d8cfb1d1d33",
+          "number": "33",
+          "street": "Smull Avenue",
+          "unit": "",
+          "city": "Caldwell",
+          "district": "",
+          "region": "NJ",
+          "postcode": "07006",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.2744433, 40.8417405]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "4187690ea78b8f1b",
+          "number": "397",
+          "street": "Hillside Avenue",
+          "unit": "",
+          "city": "Orange",
+          "district": "",
+          "region": "NJ",
+          "postcode": "07050",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.242768, 40.7611201]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "d5d834c84ba076d2",
+          "number": "370",
+          "street": "Fairview Avenue",
+          "unit": "",
+          "city": "Orange",
+          "district": "",
+          "region": "NJ",
+          "postcode": "07050",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.2416856, 40.7612573]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "4f321e0548a7a60e",
+          "number": "246",
+          "street": "Duane Street",
+          "unit": "",
+          "city": "Orange",
+          "district": "",
+          "region": "NJ",
+          "postcode": "07050",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.2233978, 40.7774194]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "214d6148babb13b1",
+          "number": "241",
+          "street": "Duane Street",
+          "unit": "",
+          "city": "Orange",
+          "district": "",
+          "region": "NJ",
+          "postcode": "07050",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.2238902, 40.7774768]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "6b2703e580bf15cc",
+          "number": "125",
+          "street": "North Essex Avenue",
+          "unit": "",
+          "city": "Orange",
+          "district": "",
+          "region": "NJ",
+          "postcode": "07050",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.2284728, 40.7757973]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "3139b81ff1164462",
+          "number": "346",
+          "street": "Mechanic Street",
+          "unit": "",
+          "city": "Orange",
+          "district": "",
+          "region": "NJ",
+          "postcode": "07050",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.2342833, 40.769009]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "00a1a0b9e89dd4b0",
+          "number": "218",
+          "street": "Wood Street",
+          "unit": "",
+          "city": "Tuckerton",
+          "district": "",
+          "region": "NJ",
+          "postcode": "08087",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.3387808, 39.606004]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "124230284a742fdf",
+          "number": "96",
+          "street": "Fairway Drive",
+          "unit": "",
+          "city": "Tuckerton",
+          "district": "",
+          "region": "NJ",
+          "postcode": "08087",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.3240058, 39.6058593]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "1c4b4d6ed33b2163",
+          "number": "327",
+          "street": "East Main Street",
+          "unit": "",
+          "city": "Tuckerton",
+          "district": "",
+          "region": "NJ",
+          "postcode": "08087",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.3319573, 39.6054293]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "18b10892abe10055",
+          "number": "216",
+          "street": "Wood Street",
+          "unit": "",
+          "city": "Tuckerton",
+          "district": "",
+          "region": "NJ",
+          "postcode": "08087",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.3387808, 39.6060314]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "8311d752f7c2bfac",
+          "number": "75",
+          "street": "Admiral Drive",
+          "unit": "",
+          "city": "Tuckerton",
+          "district": "",
+          "region": "NJ",
+          "postcode": "08087",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.3250713, 39.6058769]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "9d4f8935a6bea0aa",
+          "number": "211",
+          "street": "1st Avenue",
+          "unit": "",
+          "city": "Tuckerton",
+          "district": "",
+          "region": "NJ",
+          "postcode": "08087",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.344888, 39.6071885]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "hash": "c1ab0f22762fba3d",
+          "number": "380",
+          "street": "Marine Street",
+          "unit": "",
+          "city": "Tuckerton",
+          "district": "",
+          "region": "NJ",
+          "postcode": "08087",
+          "id": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.3358205, 39.5960694]
+        }
+
+      }
+    ]
+}
